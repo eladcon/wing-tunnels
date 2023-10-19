@@ -31,4 +31,12 @@ terraform deploy
 cd server
 wing test -t <tf-aws/sim> tunnels.test.w
 ```
+### Tunnels Client
 
+#### How to build it
+
+```
+cd client
+npm install
+npm run build
+```

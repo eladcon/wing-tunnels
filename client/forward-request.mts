@@ -18,7 +18,7 @@ export default async function forwardRequest({ message, ws, port, hostname }: Fo
 
   let requestBody : Buffer | undefined = undefined;
   if (body) {
-    requestBody = Buffer.from(body, 'utf8');
+    requestBody = Buffer.from(body, "base64");
     headers["Content-length"] = requestBody.length.toString();
   }
 
@@ -85,7 +85,6 @@ export default async function forwardRequest({ message, ws, port, hostname }: Fo
   });
 
   if (requestBody && body) {
-    const requestBody : Buffer = Buffer.from(body, 'base64');
     request.write(requestBody);
     log("request body write", requestBody)
   }

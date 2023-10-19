@@ -110,21 +110,21 @@ new std.Test(inflight () => {
   };
   
 
-  // testOne(testApiOption{
-  //   url: apiUrl,
-  //   method: "GET",
-  //   response: {
-  //     status: 200
-  //   }
-  // });
+  testOne(testApiOption{
+    url: apiUrl,
+    method: "GET",
+    response: {
+      status: 200
+    }
+  });
 
-  // testOne(testApiOption{
-  //   url: "${apiUrl}/with-path",
-  //   method: "GET",
-  //   response: {
-  //     status: 200
-  //   }
-  // });
+  testOne(testApiOption{
+    url: "${apiUrl}/with-path",
+    method: "GET",
+    response: {
+      status: 200
+    }
+  });
 
   testOne(testApiOption{
     url: apiUrl,
