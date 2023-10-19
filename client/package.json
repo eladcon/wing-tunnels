@@ -1,0 +1,21 @@
+{
+  "name": "a3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup index.mts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/debug": "^4.1.9",
+    "@types/ws": "^8.5.7",
+    "debug": "^4.3.4",
+    "node-fetch": "^3.3.2",
+    "tsup": "^7.2.0",
+    "ws": "^8.14.2"
+  }
+}
