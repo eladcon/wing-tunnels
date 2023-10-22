@@ -7,7 +7,7 @@ interface StartServerResult {
   inflight close();
 }
 
-class ProxyApi impl types.IProxyApi {
+pub class ProxyApi impl types.IProxyApi {
   bucket: cloud.Bucket;
   init(handler: inflight (types.IProxyApiEvent): types.IProxyApiResponse, props: types.ProxyApiProps) {
     this.bucket = new cloud.Bucket();

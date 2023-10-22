@@ -5,7 +5,7 @@ bring "cdktf" as cdktf;
 bring "./proxyapi.types.w" as types;
 bring "./dnsimple.w" as dnsimple;
 
-class ProxyApi impl types.IProxyApi {
+pub class ProxyApi impl types.IProxyApi {
   api: awsProvider.apiGatewayRestApi.ApiGatewayRestApi;
   apiEndpoint: str;
   init(handler: inflight (types.IProxyApiEvent): types.IProxyApiResponse, props: types.ProxyApiProps) {

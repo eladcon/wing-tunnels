@@ -7,7 +7,7 @@ interface StartWebSocketApiResult {
   inflight url(): str;
 }
 
-class WebSocketApi impl types.IWebSocketsApi {
+pub class WebSocketApi impl types.IWebSocketsApi {
   var connectFn: inflight (str): void;
   var disconnectFn: inflight (str): void;
   var onmessageFn: inflight (str, str): void;

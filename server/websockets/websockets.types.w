@@ -1,4 +1,4 @@
-interface IWebSocketsApi {
+pub interface IWebSocketsApi {
   onConnect(fn: inflight (str): void);
   onDisconnect(fn: inflight (str): void);
   onMessage(fn: inflight (str, str): void);

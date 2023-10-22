@@ -35,7 +35,7 @@ struct ForwardResponseMessage extends Message {
   body: str?;
 }
 
-class TunnelsApi {
+pub class TunnelsApi {
   ws: types.IWebSocketsApi;
   api: proxyapi.ProxyApi;
   init(props: proxytypes.ProxyApiProps) {

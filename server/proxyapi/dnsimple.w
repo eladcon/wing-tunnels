@@ -3,7 +3,7 @@ bring cloud;
 bring "@cdktf/provider-aws" as awsProvider;
 bring "@cdktf/provider-dnsimple" as dnsimple;
 
-struct DNSRecordProps {
+pub struct DNSRecordProps {
   zoneName: str;
   subDomain: str;
   recordType: str;
@@ -38,7 +38,7 @@ class DNSimpleProvider {
   }
 }
 
-class DNSimpleZoneRecord {
+pub class DNSimpleZoneRecord {
   pub record: dnsimple.zoneRecord.ZoneRecord;
 
   init(props: DNSRecordProps) {
@@ -53,11 +53,11 @@ class DNSimpleZoneRecord {
   }
 }
 
-struct CertificateProps {
+pub struct CertificateProps {
   domainName: str;
 }
 
-class Certificate {
+pub class Certificate {
   pub certificate: awsProvider.acmCertificate.AcmCertificate;
 
   init(props: CertificateProps) {
@@ -78,7 +78,7 @@ struct DNSimpleValidateCertificateProps {
 
 // this class introduces some strange workarounds for validating a certificate
 // see https://github.com/hashicorp/terraform-cdk/issues/2178
-class DNSimpleValidatedCertificate {
+pub class DNSimpleValidatedCertificate {
   pub certificate: Certificate;
   pub certValidation: awsProvider.acmCertificateValidation.AcmCertificateValidation;
 

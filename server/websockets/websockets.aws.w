@@ -20,7 +20,7 @@ struct WebSocketResponse {
   body: str?;
 }
 
-class WebSocketApi impl types.IWebSocketsApi {
+pub class WebSocketApi impl types.IWebSocketsApi {
   api: awsProvider.apigatewayv2Api.Apigatewayv2Api;
   stage: awsProvider.apigatewayv2Stage.Apigatewayv2Stage;
   apiEndpoint: str;

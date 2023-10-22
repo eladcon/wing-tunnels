@@ -1,11 +1,11 @@
 bring ex;
 
-struct Connection {
+pub struct Connection {
   connectionId: str;
   subdomain: str;
 }
 
-class Connections {
+pub class Connections {
   connections: ex.DynamodbTable;
   requests: ex.Redis;
   init() {

@@ -3,7 +3,7 @@ bring "./websockets.aws.w" as WebSocketsAws;
 bring "./websockets.sim.w" as WebSocketsSim;
 bring "./websockets.types.w" as types;
 
-class WebSocketsApi impl types.IWebSocketsApi {
+pub class WebSocketsApi impl types.IWebSocketsApi {
   api: types.IWebSocketsApi;
   init() {
     let target = util.env("WING_TARGET");

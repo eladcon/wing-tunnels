@@ -4,7 +4,7 @@ bring "./proxyapi.types.w" as types;
 bring "./proxyapi.aws.w" as awsapi;
 bring "./proxyapi.sim.w" as simapi;
 
-class ProxyApi impl types.IProxyApi {
+pub class ProxyApi impl types.IProxyApi {
   inner: types.IProxyApi;
 
   init(handler: inflight (types.IProxyApiEvent): types.IProxyApiResponse, props: types.ProxyApiProps) {

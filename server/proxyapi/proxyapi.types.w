@@ -1,13 +1,13 @@
-struct ProxyApiProps {
+pub struct ProxyApiProps {
   zoneName: str;
   subDomain: str;
 }
 
-interface IProxyApi {
+pub interface IProxyApi {
   inflight url(): str;
 }
 
-struct IProxyApiEvent {
+pub struct IProxyApiEvent {
   subdomain: str;
   body: str?;
   headers: Map<str>?;
@@ -17,17 +17,17 @@ struct IProxyApiEvent {
   queryStringParameters: Map<str>?;
 }
 
-struct IProxyApiResponse {
+pub struct IProxyApiResponse {
   statusCode: num;
   body: str?;
   headers: Map<str>?;
 }
 
-struct IProxyApiAwsRequestContext {
+pub struct IProxyApiAwsRequestContext {
   domainName: str;
 }
 
-struct IProxyApiAwsRequest {
+pub struct IProxyApiAwsRequest {
   requestContext: IProxyApiAwsRequestContext;
   path: str;
   httpMethod: str;
