@@ -172,7 +172,7 @@ pub class WebSocketApi impl types.IWebSocketsApi {
     return this.wsEndpoint;
   }
 
-  pub bind(host: std.IInflightHost, ops: Array<str>) {
+  pub onLift(host: std.IInflightHost, ops: Array<str>) {
     if let host = aws.Function.from(host) {
       if ops.contains("send") {
         host.addPolicyStatements(aws.PolicyStatement {
@@ -182,8 +182,6 @@ pub class WebSocketApi impl types.IWebSocketsApi {
         });
       }
     }
-
-    
   }
 
   extern "./post-to-connection.mts" static inflight postToConnection(endpoint: str, connectionId: str, data: str);
